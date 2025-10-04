@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-// ¡CORRECCIÓN! Usamos la URL pública de Render para la API
-const API_BASE_URL = 'https://peliculas-app-api.onrender.com/api'; 
+// 🚨 CORRECCIÓN FINAL: Incluir el prefijo '/api' que usa su servidor backend.
+const API_BASE_URL = 'https://peliculas-app-backend.onrender.com/api'; 
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
-  },
+  baseURL: API_BASE_URL, // Ahora apunta a 'https://...onrender.com/api'
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 export default api;
